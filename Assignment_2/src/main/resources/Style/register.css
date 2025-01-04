@@ -1,0 +1,43 @@
+.outer_div {
+    -fx-background-color: #f8f8f8;
+}
+
+.logo_container {
+    -fx-background-color: #6c3c62;
+    -fx-alignment: center;
+
+}
+
+.logo_container FontAwesomeIconView {
+    -fx-fill: #d4af37;
+}
+
+.login_container {
+    -fx-background-color: #f8f8f8;
+
+}
+.account_selector {
+    -fx-background-color: #eee9ed;
+}
+
+.account_selector:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #ded3dc;
+}
+
+.input_field {
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+}
+
+.button {
+    -fx-background-color: #5c2751;
+    -fx-alignment: center;
+}
+
+.button:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #6c3c62;
+}
+
