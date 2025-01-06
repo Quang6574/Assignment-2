@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="375.0" styleClass="outer_div" stylesheets="@../../Style/register.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.rmit_hanoi.assignment2.controller.RegisterController">
+    <GridPane alignment="CENTER" prefHeight="58.0" prefWidth="400.0" AnchorPane.bottomAnchor="455.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="300.0" styleClass="logo_container" stylesheets="@../../Style/register.css" GridPane.columnIndex="1">
+            <FontAwesomeIconView fill="#d4af37" glyphName="HOME" size="20" text="" />
+            <Text fill="#d4af37" strokeType="OUTSIDE" strokeWidth="0.0" text="LUX PMS">
+                <font>
+                    <Font name="Arial Bold" size="12.0" />
+                </font>
+            </Text>
+        </VBox>
+        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="100.0" styleClass="logo_container" stylesheets="@../../Style/register.css">
+            <Text fill="#f8f8f8" strokeType="OUTSIDE" strokeWidth="0.0" text="SIGN UP">
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+                <font>
+                    <Font name="Arial Bold" size="12.0" />
+                </font>
+            </Text>
+        </VBox>
+    </GridPane>
+    <VBox layoutX="150.0" layoutY="200.0" prefHeight="200.0" prefWidth="100.0" styleClass="login_container" stylesheets="@../../Style/register.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+        <Text fill="#d4af37" strokeType="OUTSIDE" strokeWidth="0.0" text="Select account type">
+            <font>
+                <Font name="Arial Bold" size="14.0" />
+            </font>
+            <VBox.margin>
+                <Insets top="15.0" />
+            </VBox.margin>
+        </Text>
+        <ChoiceBox fx:id="accountDropList" prefWidth="150.0" styleClass="account_selector" stylesheets="@../../Style/register.css">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </ChoiceBox>
+        <TextField fx:id="regUsernameBox" promptText="Username" styleClass="input_field" stylesheets="@../../Style/register.css">
+            <font>
+                <Font name="Arial" size="12.0" />
+            </font>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </TextField>
+        <TextField fx:id="regPasswordBox" promptText="Password" styleClass="input_field" stylesheets="@../../Style/register.css">
+            <font>
+                <Font name="Arial Bold" size="12.0" />
+            </font>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </TextField>
+        <TextField fx:id="regRePasswordBox" promptText="Re-enter password" styleClass="input_field" stylesheets="@../../Style/register.css">
+            <font>
+                <Font name="Arial Bold" size="12.0" />
+            </font>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </TextField>
+        <TextField fx:id="regFirstnameBox" promptText="First name" styleClass="input_field" stylesheets="@../../Style/register.css">
+            <font>
+                <Font name="Arial Bold" size="12.0" />
+            </font>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </TextField>
+        <TextField fx:id="regLastnameBox" promptText="Last name" styleClass="input_field" stylesheets="@../../Style/register.css">
+            <font>
+                <Font name="Arial Bold" size="12.0" />
+            </font>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </TextField>
+        <Text fill="#d4af37" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of birth">
+            <font>
+                <Font name="Arial Bold" size="14.0" />
+            </font>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </Text>
+        <DatePicker fx:id="regDobBox" />
+        <TextField fx:id="regPhonenumBox" promptText="Phone number" styleClass="input_field" stylesheets="@../../Style/register.css">
+            <font>
+                <Font name="Arial Bold" size="12.0" />
+            </font>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </TextField>
+        <TextField fx:id="regEmailBox" promptText="Email (optional)" styleClass="input_field" stylesheets="@../../Style/register.css">
+            <font>
+                <Font name="Arial Bold" size="12.0" />
+            </font>
+            <VBox.margin>
+                <Insets bottom="15.0" top="10.0" />
+            </VBox.margin>
+        </TextField>
+        <HBox prefHeight="26.0" prefWidth="300.0">
+            <children>
+                <CheckBox fx:id="confirmCheckbox" mnemonicParsing="false" prefHeight="23.0" prefWidth="168.0" text=" I have read and accept the " textAlignment="JUSTIFY">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </CheckBox>
+                <Hyperlink fx:id="termsConditionHyperlink" prefHeight="23.0" prefWidth="111.0" text="Terms &amp; Condition">
+                    <HBox.margin>
+                        <Insets left="-5.0" />
+                    </HBox.margin>
+                </Hyperlink>
+            </children>
+            <VBox.margin>
+                <Insets bottom="5.0" />
+            </VBox.margin>
+        </HBox>
+        <GridPane alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                <Button fx:id="toLoginSceneButton" mnemonicParsing="false" onAction="#toLoginScene" stylesheets="@../../Style/register.css" text="Return" textAlignment="JUSTIFY" textFill="#d4af37">
+                    <graphic>
+                        <FontAwesomeIconView fill="#d4af37" glyphName="ARROW_LEFT" />
+                    </graphic>
+                    <font>
+                        <Font name="Arial Bold" size="12.0" />
+                    </font>
+                </Button>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                <Button fx:id="signUpbutton" mnemonicParsing="false" onAction="#signUp" stylesheets="@../../Style/register.css" text="Sign Up" textAlignment="JUSTIFY" textFill="#d4af37">
+                    <graphic>
+                        <FontAwesomeIconView fill="#d4af37" glyphName="CHECK" />
+                    </graphic>
+                    <font>
+                        <Font name="Arial Bold" size="12.0" />
+                    </font>
+                </Button>
+            </HBox>
+        </GridPane>
+    </VBox>
+</AnchorPane>
