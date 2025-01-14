@@ -2,13 +2,13 @@
 # Contribution
 RMIT University Hanoi - Group 18:
 
-Nguyen Manh Ky Anh (s4029318): 3.0
+Nguyen Manh Ky Anh (s4029318): Backend Developer, Tester
 
-Luong Gia Bao (s4040517): 3.0
+Luong Gia Bao (s4040517): Frontend Developer, Tester
 
-Nguyen Phu Minh Quang (s39968430): 3.0
+Nguyen Phu Minh Quang (s39968430): Full-stack Developer, Tester
 
-Le Quang Thao (s4028673): 3.0
+Le Quang Thao (s4028673): Backend Developer, Tester
 
 # System requirements
 It is recommended your computer meets the requirements below:
