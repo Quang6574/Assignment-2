@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="right_scene" stylesheets="@../../Style/RegisteredUser.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.rmit_hanoi.assignment2.controller.register_user.manager.ManagerManageResident">
+    <ImageView fitHeight="600.0" fitWidth="281.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../../Style/img.png" />
+    </ImageView>
+    <FontAwesomeIconView fill="#d4af37" glyphName="HOME" layoutX="117.0" layoutY="81.0" size="40" text="">
+        <font>
+            <Font size="18.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </FontAwesomeIconView>
+    <Text fill="#d4af37" layoutX="98.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LUX PMS">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Text>
+    <Text fill="#d4af37" layoutX="59.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, Manager">
+        <font>
+            <Font name="Lucida Sans Unicode" size="18.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Text>
+    <Button layoutX="31.0" layoutY="221.0" mnemonicParsing="false" onAction="#toAgreementManage" prefHeight="40.0" prefWidth="209.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Manage Rental Agreement">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <FontAwesomeIconView fill="#d4af37" glyphName="CLOSE" layoutX="70.0" layoutY="567.0" size="30" text="">
+        <font>
+            <Font size="18.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </FontAwesomeIconView>
+    <Button layoutX="97.0" layoutY="543.0" mnemonicParsing="false" onAction="#switchToLoginMenu" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Log Out">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Button layoutX="61.0" layoutY="280.0" mnemonicParsing="false" onAction="#toPayment" prefHeight="40.0" prefWidth="146.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Manage Payment">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Button layoutX="69.0" layoutY="340.0" mnemonicParsing="false" onAction="#toManageUser" prefHeight="40.0" prefWidth="134.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Manage User">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Button disable="true" layoutX="65.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="142.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Manage Property">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <BoxBlur>
+                <input>
+                    <DropShadow />
+                </input>
+            </BoxBlur>
+        </effect>
+    </Button>
+    <Button layoutX="69.0" layoutY="397.0" mnemonicParsing="false" onAction="#toStatistic" prefHeight="40.0" prefWidth="134.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="View Statistics">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Text fill="#5c2751" layoutX="294.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Property">
+        <font>
+            <Font name="System Bold" size="30.0" />
+        </font>
+    </Text>
+    <Text layoutX="294.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Property type:" textAlignment="JUSTIFY">
+        <font>
+            <Font name="Arial Bold" size="13.0" />
+        </font>
+    </Text>
+    <Button layoutX="469.0" layoutY="64.0" mnemonicParsing="false" onAction="#toManageCommercial" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Commercial">
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <GaussianBlur />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Button layoutX="703.0" layoutY="198.0" mnemonicParsing="false" onAction="#dispFilterResident" prefHeight="30.0" prefWidth="62.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Search">
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <TextField fx:id="addressTextBox" layoutX="298.0" layoutY="509.0" prefHeight="25.0" prefWidth="108.0" />
+    <ChoiceBox fx:id="statusChoiceBox" layoutX="429.0" layoutY="509.0" prefHeight="26.0" prefWidth="95.0" />
+    <TextField fx:id="feeTextBox" layoutX="548.0" layoutY="509.0" prefHeight="25.0" prefWidth="77.0" />
+    <ChoiceBox fx:id="periodChoiceBox" layoutX="649.0" layoutY="509.0" prefHeight="26.0" prefWidth="108.0" />
+    <TextField fx:id="bedroomTextBox" layoutX="299.0" layoutY="562.0" prefHeight="25.0" prefWidth="62.0" />
+    <Button layoutX="683.0" layoutY="560.0" mnemonicParsing="false" onAction="#updateResidentProperty" prefHeight="30.0" prefWidth="77.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Save">
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Text layoutX="299.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Property Address" />
+    <Text layoutX="431.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" />
+    <Text layoutX="548.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Renting Fee" />
+    <Text layoutX="650.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Period" />
+    <Text layoutX="299.0" layoutY="559.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bedroom" />
+    <Text layoutX="439.0" layoutY="558.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pet Friendly" />
+    <Text layoutX="381.0" layoutY="559.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Garden" />
+    <Button layoutX="578.0" layoutY="560.0" mnemonicParsing="false" onAction="#DeleteResidentProperty" prefHeight="30.0" prefWidth="77.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Delete">
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Button layoutX="630.0" layoutY="25.0" mnemonicParsing="false" onAction="#toAddCommercial" prefHeight="30.0" prefWidth="146.0" styleClass="menu_button" text="Create new property">
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <VBox layoutX="298.0" layoutY="102.0" prefHeight="111.0" prefWidth="272.0">
+        <HBox prefHeight="27.0" prefWidth="450.0">
+            <VBox.margin>
+                <Insets top="5.0" />
+            </VBox.margin>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Has Garden">
+                <HBox.margin>
+                    <Insets right="5.0" top="2.0" />
+                </HBox.margin>
+                <font>
+                    <Font name="Arial Bold" size="13.0" />
+                </font>
+            </Text>
+            <CheckBox fx:id="f_gardenCheckbox" mnemonicParsing="false" />
+        </HBox>
+        <HBox prefHeight="42.0" prefWidth="450.0">
+            <VBox.margin>
+                <Insets top="15.0" />
+            </VBox.margin>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Is Pet Friendly">
+                <HBox.margin>
+                    <Insets right="5.0" />
+                </HBox.margin>
+                <font>
+                    <Font name="Arial Bold" size="13.0" />
+                </font>
+            </Text>
+            <CheckBox fx:id="f_petCheckbox" mnemonicParsing="false" />
+        </HBox>
+        <HBox prefHeight="100.0" prefWidth="200.0">
+            <VBox.margin>
+                <Insets top="15.0" />
+            </VBox.margin>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rent Period">
+                <HBox.margin>
+                    <Insets top="4.0" />
+                </HBox.margin>
+                <font>
+                    <Font name="Arial Bold" size="13.0" />
+                </font>
+            </Text>
+            <ChoiceBox fx:id="f_periodChoiceBox" prefHeight="26.0" prefWidth="108.0">
+                <HBox.margin>
+                    <Insets left="10.0" />
+                </HBox.margin>
+            </ChoiceBox>
+        </HBox>
+    </VBox>
+    <TableView fx:id="filterResidentTable" layoutX="309.0" layoutY="233.0" onMouseClicked="#rowSelected" prefHeight="242.0" prefWidth="456.0">
+        <columns>
+            <TableColumn fx:id="f_residentIdRow" editable="false" prefWidth="25.0" text="ID" />
+            <TableColumn fx:id="f_residentAddressRow" editable="false" prefWidth="66.0" sortType="DESCENDING" text="Address" />
+            <TableColumn fx:id="f_residentBedRow" editable="false" prefWidth="34.0" text="Bedroom" />
+            <TableColumn fx:id="f_residentGardenRow" editable="false" prefWidth="41.0" text="Garden" />
+            <TableColumn fx:id="f_residentPetRow" editable="false" prefWidth="39.0" text="Pet Friendly" />
+            <TableColumn fx:id="f_residentPeriodRow" minWidth="0.0" prefWidth="98.0" text="Rent Period" />
+            <TableColumn fx:id="f_residentFeeRow" minWidth="0.0" prefWidth="38.0" text="Fee" />
+            <TableColumn fx:id="f_residentImage" prefWidth="59.0" text="Image" />
+            <TableColumn fx:id="f_RsidentStatusrow" prefWidth="55.0" text="Status" />
+        </columns>
+    </TableView>
+    <CheckBox fx:id="GardenCheckBox" layoutX="383.0" layoutY="566.0" mnemonicParsing="false" />
+    <CheckBox fx:id="PetFriendlyCheckBox" layoutX="443.0" layoutY="566.0" mnemonicParsing="false" />
+    <HBox layoutX="514.0" layoutY="102.0" prefHeight="26.0" prefWidth="272.0">
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bedroom number:">
+            <HBox.margin>
+                <Insets right="5.0" top="4.0" />
+            </HBox.margin>
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+        </Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="From">
+            <HBox.margin>
+                <Insets left="5.0" top="4.0" />
+            </HBox.margin>
+        </Text>
+        <TextField fx:id="f_minBedField" prefHeight="25.0" prefWidth="40.0" promptText="min.">
+            <HBox.margin>
+                <Insets left="5.0" />
+            </HBox.margin>
+        </TextField>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="To">
+            <HBox.margin>
+                <Insets left="5.0" top="4.0" />
+            </HBox.margin>
+        </Text>
+        <TextField fx:id="f_maxBedField" prefHeight="25.0" prefWidth="40.0" promptText="max">
+            <HBox.margin>
+                <Insets left="5.0" />
+            </HBox.margin>
+        </TextField>
+    </HBox>
+    <Button disable="true" layoutX="394.0" layoutY="64.0" mnemonicParsing="false" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Resident">
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <HBox layoutX="510.0" layoutY="145.0" prefHeight="26.0" prefWidth="281.0">
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rent Price">
+            <HBox.margin>
+                <Insets top="4.0" />
+            </HBox.margin>
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+        </Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="From">
+            <HBox.margin>
+                <Insets left="5.0" top="4.0" />
+            </HBox.margin>
+        </Text>
+        <TextField fx:id="f_minPriceBox" prefHeight="25.0" prefWidth="70.0" promptText="min.">
+            <HBox.margin>
+                <Insets left="5.0" />
+            </HBox.margin>
+        </TextField>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="To">
+            <HBox.margin>
+                <Insets left="5.0" top="4.0" />
+            </HBox.margin>
+        </Text>
+        <TextField fx:id="f_maxPriceBox" prefHeight="25.0" prefWidth="70.0" promptText="max">
+            <HBox.margin>
+                <Insets left="5.0" />
+            </HBox.margin>
+        </TextField>
+    </HBox>
+</AnchorPane>

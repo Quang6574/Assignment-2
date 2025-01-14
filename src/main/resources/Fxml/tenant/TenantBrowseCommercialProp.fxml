@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="tenantPane" prefHeight="600.0" prefWidth="800.0" styleClass="right_scene" stylesheets="@../../Style/RegisteredUser.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.rmit_hanoi.assignment2.controller.register_user.tenant.TenantRentCommercial">
+    <VBox layoutX="24.0" layoutY="37.0" prefHeight="400.0" prefWidth="275.0" styleClass="menu_container" stylesheets="@../../Style/RegisteredUser.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox prefHeight="150.0" prefWidth="275.0" styleClass="logo_container" stylesheets="@../../Style/RegisteredUser.css">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <FontAwesomeIconView fill="#d4af37" glyphName="HOME" size="40" text="">
+                <font>
+                    <Font size="18.0" />
+                </font>
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+            </FontAwesomeIconView>
+            <Text fill="#d4af37" strokeType="OUTSIDE" strokeWidth="0.0" text="LUX PMS">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+            </Text>
+        </VBox>
+        <Text fill="#d4af37" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, Tenant">
+            <font>
+                <Font size="18.0" />
+            </font>
+            <VBox.margin>
+                <Insets bottom="30.0" top="10.0" />
+            </VBox.margin>
+        </Text>
+        <VBox prefHeight="400.0" prefWidth="275.0" styleClass="menu_container" stylesheets="@../../Style/RegisteredUser.css">
+            <VBox.margin>
+                <Insets bottom="35.0" />
+            </VBox.margin>
+            <HBox prefHeight="75.0" prefWidth="265.0" styleClass="button_container" stylesheets="@../../Style/RegisteredUser.css">
+                <VBox.margin>
+                    <Insets bottom="15.0" />
+                </VBox.margin>
+                <FontAwesomeIconView fill="#d4af37" glyphName="SEARCH" opacity="0.5" size="30">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="8.0" />
+                    </HBox.margin>
+                </FontAwesomeIconView>
+                <Button disable="true" mnemonicParsing="false" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Browse Property">
+                    <font>
+                        <Font name="Arial" size="15.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Button>
+            </HBox>
+            <HBox prefHeight="75.0" prefWidth="200.0" styleClass="button_container" stylesheets="@../../Style/RegisteredUser.css">
+                <VBox.margin>
+                    <Insets bottom="15.0" />
+                </VBox.margin>
+                <FontAwesomeIconView fill="#d4af37" glyphName="CLIPBOARD" size="30">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="8.0" />
+                    </HBox.margin>
+                </FontAwesomeIconView>
+                <Button mnemonicParsing="false" onAction="#toBrowseAgreement" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Browse Rent Agreement">
+                    <font>
+                        <Font name="Arial" size="15.0" />
+                    </font>
+                </Button>
+            </HBox>
+            <HBox prefHeight="75.0" prefWidth="275.0" styleClass="button_container" stylesheets="@../../Style/RegisteredUser.css">
+                <VBox.margin>
+                    <Insets bottom="15.0" />
+                </VBox.margin>
+                <FontAwesomeIconView fill="#d4af37" glyphName="MALE" size="30">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="8.0" />
+                    </HBox.margin>
+                </FontAwesomeIconView>
+                <Button mnemonicParsing="false" onAction="#switchPersonInfo" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Personal Information">
+                    <font>
+                        <Font name="Arial" size="15.0" />
+                    </font>
+                </Button>
+            </HBox>
+            <HBox prefHeight="75.0" prefWidth="200.0" styleClass="button_container" stylesheets="@../../Style/RegisteredUser.css">
+                <VBox.margin>
+                    <Insets bottom="15.0" />
+                </VBox.margin>
+                <FontAwesomeIconView fill="#d4af37" glyphName="CLOSE" size="30">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="8.0" />
+                    </HBox.margin>
+                </FontAwesomeIconView>
+                <Button mnemonicParsing="false" onAction="#switchToLoginMenu" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Log Out">
+                    <font>
+                        <Font name="Arial" size="15.0" />
+                    </font>
+                </Button>
+            </HBox>
+        </VBox>
+    </VBox>
+    <HBox layoutX="320.0" layoutY="58.0" prefHeight="29.0" prefWidth="301.0">
+        <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Property type:" textAlignment="JUSTIFY">
+                <HBox.margin>
+                    <Insets top="5.0" />
+                </HBox.margin>
+                <font>
+                    <Font name="Arial Bold" size="13.0" />
+                </font>
+            </Text>
+            <Button mnemonicParsing="false" onAction="#toBrowseResident" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Resident">
+                <HBox.margin>
+                    <Insets left="5.0" />
+                </HBox.margin>
+            </Button>
+            <Button disable="true" mnemonicParsing="false" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Commercial">
+                <HBox.margin>
+                    <Insets left="8.0" />
+                </HBox.margin>
+            </Button>
+        </children>
+    </HBox>
+    <Button layoutX="692.0" layoutY="229.0" mnemonicParsing="false" onAction="#filterTable" prefHeight="26.0" prefWidth="65.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Search" />
+    <TableView fx:id="commercialTable" layoutX="314.0" layoutY="265.0" onMouseClicked="#rowSelected" prefHeight="258.0" prefWidth="450.0">
+        <columns>
+            <TableColumn fx:id="idRow" prefWidth="17.0" text="ID" />
+            <TableColumn fx:id="addressRow" prefWidth="73.0" text="Address" />
+            <TableColumn fx:id="businessTypeRow" prefWidth="84.0" text="Business Type" />
+            <TableColumn fx:id="parkSlotRow" prefWidth="51.0" text="Parking Slot" />
+            <TableColumn fx:id="areaRow" prefWidth="63.0" text="Area" />
+            <TableColumn fx:id="periodRow" prefWidth="59.0" text="Rent Period" />
+            <TableColumn fx:id="priceRow" prefWidth="71.0" text="Price" />
+            <TableColumn fx:id="imageRow" prefWidth="31.0" text="Image" />
+        </columns>
+    </TableView>
+    <Button layoutX="699.0" layoutY="554.0" mnemonicParsing="false" onAction="#rentProperty" prefHeight="25.0" prefWidth="65.0" styleClass="menu_button" text="Rent" />
+    <Text layoutX="301.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Browse Property">
+        <font>
+            <Font size="30.0" />
+        </font>
+    </Text>
+    <TextField fx:id="parkMinBox" layoutX="440.0" layoutY="128.0" prefHeight="25.0" prefWidth="40.0" promptText="min." />
+    <TextField fx:id="businessTypeTextBox" layoutX="416.0" layoutY="95.0" prefHeight="25.0" prefWidth="150.0" />
+    <TextField fx:id="parkMaxBox" layoutX="506.0" layoutY="128.0" prefHeight="25.0" prefWidth="40.0" promptText="max" />
+    <TextField fx:id="areaMinBox" layoutX="389.0" layoutY="160.0" prefHeight="25.0" prefWidth="40.0" promptText="min." />
+    <TextField fx:id="areaMaxBox" layoutX="452.0" layoutY="160.0" prefHeight="25.0" prefWidth="40.0" promptText="max" />
+    <TextField fx:id="priceMinTextBox" layoutX="394.0" layoutY="229.0" prefHeight="25.0" prefWidth="70.0" promptText="min." />
+    <TextField fx:id="priceMaxTextBox" layoutX="491.0" layoutY="229.0" prefHeight="25.0" prefWidth="70.0" promptText="max" />
+    <Text layoutX="313.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Business Type:">
+        <font>
+            <Font name="System Bold" size="14.0" />
+        </font>
+    </Text>
+    <Text layoutX="313.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parking Slot: ">
+        <font>
+            <Font name="Arial Bold" size="13.0" />
+        </font>
+    </Text>
+    <Text layoutX="402.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From">
+        <font>
+            <Font name="Arial" size="13.0" />
+        </font>
+    </Text>
+    <Text layoutX="484.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To">
+        <font>
+            <Font name="Arial" size="13.0" />
+        </font>
+    </Text>
+    <Text layoutX="313.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Area: ">
+        <font>
+            <Font name="Arial Bold" size="13.0" />
+        </font>
+    </Text>
+    <Text layoutX="355.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From" />
+    <Text layoutX="433.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To" />
+    <Text layoutX="314.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rent Period:">
+        <font>
+            <Font name="Arial Bold" size="13.0" />
+        </font>
+    </Text>
+    <Text layoutX="313.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:">
+        <font>
+            <Font name="Arial Bold" size="13.0" />
+        </font>
+    </Text>
+    <Text layoutX="353.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From">
+        <font>
+            <Font name="Arial" size="13.0" />
+        </font>
+    </Text>
+    <Text layoutX="472.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To">
+        <font>
+            <Font name="Arial" size="13.0" />
+        </font>
+    </Text>
+   <ChoiceBox fx:id="periodChoiceBox" layoutX="397.0" layoutY="194.0" prefWidth="150.0" />
+   <ChoiceBox fx:id="paymentMethodChoiceBox" layoutX="397.0" layoutY="554.0" prefWidth="150.0" />
+   <Text layoutX="400.0" layoutY="550.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Method" />
+   <Text layoutX="290.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose before rent" />
+</AnchorPane>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="right_scene" stylesheets="@../../Style/RegisteredUser.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.rmit_hanoi.assignment2.controller.register_user.manager.ManagerManageAgreement">
+    <ImageView fitHeight="600.0" fitWidth="281.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../Style/img.png" />
+        </image>
+    </ImageView>
+    <FontAwesomeIconView fill="#d4af37" glyphName="HOME" layoutX="117.0" layoutY="81.0" size="40" text="">
+        <font>
+            <Font size="18.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </FontAwesomeIconView>
+    <Text fill="#d4af37" layoutX="98.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LUX PMS">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Text>
+    <Text fill="#d4af37" layoutX="59.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, Manager">
+        <font>
+            <Font name="Lucida Sans Unicode" size="18.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Text>
+    <Button disable="true" layoutX="31.0" layoutY="221.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="209.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Manage Rental Agreement">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <BoxBlur>
+                <input>
+                    <DropShadow />
+                </input>
+            </BoxBlur>
+        </effect>
+    </Button>
+    <FontAwesomeIconView fill="#d4af37" glyphName="CLOSE" layoutX="70.0" layoutY="567.0" size="30" text="">
+        <font>
+            <Font size="18.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </FontAwesomeIconView>
+    <Button layoutX="97.0" layoutY="543.0" mnemonicParsing="false" onAction="#switchToLoginMenu" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Log Out">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Button layoutX="61.0" layoutY="280.0" mnemonicParsing="false" onAction="#toManagePayment" prefHeight="40.0" prefWidth="149.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Manage Payment">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Button layoutX="69.0" layoutY="340.0" mnemonicParsing="false" onAction="#switchToManageUser" prefHeight="40.0" prefWidth="134.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Manage User">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Button layoutX="65.0" layoutY="160.0" mnemonicParsing="false" onAction="#toManageCommercial" prefHeight="40.0" prefWidth="142.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Manage Property">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Button layoutX="69.0" layoutY="397.0" mnemonicParsing="false" onAction="#switchToViewStatistic" prefHeight="40.0" prefWidth="134.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="View Statistics">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <TableView fx:id="RAtable" layoutX="288.0" layoutY="48.0" onMouseClicked="#rowClicked" prefHeight="440.0" prefWidth="491.0">
+        <columns>
+            <TableColumn fx:id="IdColumn" prefWidth="33.0" text="ID" />
+            <TableColumn fx:id="TenantColumn" prefWidth="60.0" text="Tenant" />
+            <TableColumn fx:id="OwnerColumn" prefWidth="57.0" text="Owner" />
+            <TableColumn fx:id="ContractDateColumn" prefWidth="110.0" text="Contract Date" />
+            <TableColumn fx:id="RentingFeeColumn" prefWidth="96.0" text="Renting Fee" />
+            <TableColumn fx:id="PeriodColumn" prefWidth="76.0" text="Period" />
+            <TableColumn fx:id="StatusColumn" prefWidth="58.0" text="Status" />
+        </columns>
+    </TableView>
+    <Text fill="#5c2751" layoutX="288.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Rental Agreements" wrappingWidth="464.13671875">
+        <font>
+            <Font name="System Bold" size="30.0" />
+        </font>
+    </Text>
+    <TextField fx:id="idTextBox" disable="true" layoutX="303.0" layoutY="522.0" prefHeight="25.0" prefWidth="30.0" visible="false" />
+    <Text layoutX="303.0" layoutY="518.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+    <TextField fx:id="TenantTextBox" disable="true" layoutX="353.0" layoutY="522.0" prefHeight="25.0" prefWidth="37.0" visible="false" />
+    <TextField fx:id="OwnerIdTextBox" disable="true" layoutX="411.0" layoutY="522.0" prefHeight="25.0" prefWidth="37.0" visible="false" />
+    <Text layoutX="296.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contract Date" />
+    <TextField fx:id="RentingFeeTextBox" layoutX="423.0" layoutY="510.0" prefHeight="25.0" prefWidth="77.0" />
+    <Text layoutX="423.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Renting Fee" />
+    <ChoiceBox fx:id="PeriodChoiceBox" layoutX="568.0" layoutY="510.0" prefHeight="25.0" prefWidth="53.0" />
+    <Text layoutX="568.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Period" />
+    <ChoiceBox fx:id="StatusChoiceBox" layoutX="692.0" layoutY="510.0" prefHeight="25.0" prefWidth="53.0" />
+    <Text layoutX="692.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" />
+    <Button layoutX="400.0" layoutY="543.0" mnemonicParsing="false" onAction="#updateRentalAgreement" prefHeight="40.0" prefWidth="78.0" styleClass="menu_button" text="Save">
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Button layoutX="585.0" layoutY="543.0" mnemonicParsing="false" onAction="#deleteRentalAgreement" prefHeight="40.0" prefWidth="78.0" styleClass="menu_button" text="Delete">
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+   <DatePicker fx:id="ContractDatePicker" layoutX="293.0" layoutY="510.0" prefHeight="25.0" prefWidth="93.0" />
+</AnchorPane>

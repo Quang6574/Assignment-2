@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="ManagerPane" prefHeight="600.0" prefWidth="800.0" styleClass="right_scene" stylesheets="@../../Style/RegisteredUser.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.rmit_hanoi.assignment2.controller.register_user.manager.ManagerManagePayment">
+    <ImageView fitHeight="600.0" fitWidth="281.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../Style/img.png" />
+        </image>
+    </ImageView>
+    <FontAwesomeIconView fill="#d4af37" glyphName="HOME" layoutX="117.0" layoutY="81.0" size="40" text="">
+        <font>
+            <Font size="18.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </FontAwesomeIconView>
+    <Text fill="#d4af37" layoutX="98.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LUX PMS">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Text>
+    <Text fill="#d4af37" layoutX="59.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, Manager">
+        <font>
+            <Font name="Lucida Sans Unicode" size="18.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Text>
+    <Button layoutX="31.0" layoutY="221.0" mnemonicParsing="false" onAction="#toAgreement" prefHeight="40.0" prefWidth="209.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Manage Rental Agreement">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <FontAwesomeIconView fill="#d4af37" glyphName="CLOSE" layoutX="70.0" layoutY="567.0" size="30" text="">
+        <font>
+            <Font size="18.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </FontAwesomeIconView>
+    <Button layoutX="97.0" layoutY="543.0" mnemonicParsing="false" onAction="#switchToLoginMenu" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Log Out">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Button disable="true" layoutX="61.0" layoutY="280.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="149.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Manage Payment">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <BoxBlur>
+                <input>
+                    <DropShadow />
+                </input>
+            </BoxBlur>
+        </effect>
+    </Button>
+    <Button layoutX="69.0" layoutY="340.0" mnemonicParsing="false" onAction="#toManageUser" prefHeight="40.0" prefWidth="134.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Manage User">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Button layoutX="65.0" layoutY="160.0" mnemonicParsing="false" onAction="#toManageCommercial" prefHeight="40.0" prefWidth="142.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Manage Property">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Button layoutX="69.0" layoutY="397.0" mnemonicParsing="false" onAction="#toStatistic" prefHeight="40.0" prefWidth="134.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="View Statistics">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <TableView fx:id="PaymentTable" layoutX="296.0" layoutY="78.0" onMouseClicked="#rowSelected" prefHeight="399.0" prefWidth="480.0">
+        <columns>
+            <TableColumn fx:id="paymentIdColumn" minWidth="0.0" prefWidth="50.0" text="Payment ID" />
+            <TableColumn fx:id="rentAgreementIdColumn" prefWidth="44.0" text="Agreement ID" />
+            <TableColumn fx:id="tenantIdColumn" prefWidth="53.0" text="Tenant ID" />
+            <TableColumn fx:id="payMethodColumn" prefWidth="56.0" text="Pay Method" />
+            <TableColumn fx:id="payDateColumn" prefWidth="86.0" text="Payment Date" />
+            <TableColumn fx:id="rentPriceColumn" editable="false" prefWidth="94.0" text="Amount" />
+            <TableColumn fx:id="statusColumn" prefWidth="96.0" text="Status" />
+        </columns>
+    </TableView>
+    <Text fill="#5c2751" layoutX="285.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Browse Payment">
+        <font>
+            <Font name="System Bold" size="30.0" />
+        </font>
+    </Text>
+    <Button layoutX="346.0" layoutY="541.0" mnemonicParsing="false" onAction="#deletePayment" prefHeight="40.0" prefWidth="142.0" styleClass="menu_button" text="Delete">
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+    </Button>
+    <Button layoutX="580.0" layoutY="541.0" mnemonicParsing="false" onAction="#updatePayment" prefHeight="40.0" prefWidth="142.0" styleClass="menu_button" text="Update">
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+    </Button>
+    <Text layoutX="462.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Date" />
+    <TextField fx:id="amountTextBox" layoutX="563.0" layoutY="501.0" prefHeight="25.0" prefWidth="74.0" />
+    <Text layoutX="563.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount" />
+    <ChoiceBox fx:id="statusChoiceBox" layoutX="651.0" layoutY="501.0" prefHeight="25.0" prefWidth="108.0" />
+    <DatePicker fx:id="paymentDatePicker" layoutX="454.0" layoutY="501.0" prefHeight="25.0" prefWidth="90.0" />
+    <Text layoutX="651.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" />
+   <ChoiceBox fx:id="paymentMethodChoiceBox" layoutX="316.0" layoutY="501.0" prefHeight="25.0" prefWidth="108.0" />
+   <Text layoutX="316.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Method" />
+</AnchorPane>

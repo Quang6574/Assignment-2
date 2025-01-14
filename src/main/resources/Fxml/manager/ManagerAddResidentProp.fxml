@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="right_scene" stylesheets="@../../Style/RegisteredUser.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.rmit_hanoi.assignment2.controller.register_user.manager.ManagerAddResident">
+    <ImageView fitHeight="600.0" fitWidth="281.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../../Style/img.png" />
+    </ImageView>
+    <FontAwesomeIconView fill="#d4af37" glyphName="HOME" layoutX="117.0" layoutY="81.0" size="40" text="">
+        <font>
+            <Font size="18.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </FontAwesomeIconView>
+    <Text fill="#d4af37" layoutX="98.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LUX PMS">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Text>
+    <Text fill="#d4af37" layoutX="59.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, Manager">
+        <font>
+            <Font name="Lucida Sans Unicode" size="18.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Text>
+    <Button layoutX="31.0" layoutY="221.0" mnemonicParsing="false" onAction="#toManageAgreement" prefHeight="40.0" prefWidth="209.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Manage Rental Agreement">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <FontAwesomeIconView fill="#d4af37" glyphName="CLOSE" layoutX="70.0" layoutY="567.0" size="30" text="">
+        <font>
+            <Font size="18.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </FontAwesomeIconView>
+    <Button layoutX="97.0" layoutY="543.0" mnemonicParsing="false" onAction="#switchToLoginMenu" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Log Out">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Button layoutX="61.0" layoutY="280.0" mnemonicParsing="false" onAction="#toManagePayment" prefHeight="40.0" prefWidth="149.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Manage Payment">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Button layoutX="69.0" layoutY="340.0" mnemonicParsing="false" onAction="#toManageUser" prefHeight="40.0" prefWidth="134.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Manage User">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Button layoutX="69.0" layoutY="397.0" mnemonicParsing="false" onAction="#toStatistic" prefHeight="40.0" prefWidth="134.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="View Statistics">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Button disable="true" layoutX="65.0" layoutY="160.0" mnemonicParsing="false" onAction="#toManageCommercial" prefHeight="40.0" prefWidth="142.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Manage Property">
+        <font>
+            <Font name="Arial Bold" size="15.0" />
+        </font>
+      <effect>
+         <BoxBlur>
+            <input>
+               <DropShadow />
+            </input>
+         </BoxBlur>
+      </effect>
+    </Button>
+    <TextField fx:id="PropertyAddressTextBox" layoutX="305.0" layoutY="168.0" prefHeight="30.0" prefWidth="233.0">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </TextField>
+    <Text fill="#5c2751" layoutX="305.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adding a property">
+        <font>
+            <Font name="System Bold" size="30.0" />
+        </font>
+    </Text>
+    <ChoiceBox fx:id="StatusChoiceBox" layoutX="305.0" layoutY="233.0" prefHeight="30.0" prefWidth="233.0" />
+    <TextField fx:id="RentingFeeTextBox" layoutX="305.0" layoutY="291.0" prefHeight="30.0" prefWidth="233.0">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </TextField>
+    <ChoiceBox fx:id="PeriodChoiceBox" layoutX="305.0" layoutY="346.0" prefHeight="30.0" prefWidth="233.0" />
+    <TextField fx:id="BedroomTextBox" layoutX="305.0" layoutY="402.0" prefHeight="30.0" prefWidth="233.0">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </TextField>
+    <Text layoutX="304.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Property Address">
+        <font>
+            <Font size="14.0" />
+        </font></Text>
+    <Text layoutX="305.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status">
+        <font>
+            <Font size="14.0" />
+        </font></Text>
+    <Text layoutX="306.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Renting Fee">
+        <font>
+            <Font size="14.0" />
+        </font></Text>
+    <Text layoutX="304.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Period">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <Text layoutX="304.0" layoutY="396.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bedroom">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <Text layoutX="304.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Garden">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <Text layoutX="305.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pet Friendly">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <Text layoutX="550.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Property Type:" />
+    <Button disable="true" layoutX="636.0" layoutY="67.0" mnemonicParsing="false" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Resident">
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Button layoutX="708.0" layoutY="67.0" mnemonicParsing="false" onAction="#toAddCommercial" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Commercial">
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <GaussianBlur />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Button layoutX="636.0" layoutY="528.0" mnemonicParsing="false" onAction="#createResidentProperty" prefHeight="40.0" prefWidth="134.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Create">
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Button>
+    <Button layoutX="645.0" layoutY="115.0" mnemonicParsing="false" onAction="#addResidentImg" prefHeight="28.0" prefWidth="85.0" text="Add Image" />
+    <ImageView fx:id="ResidentImageView" fitHeight="150.0" fitWidth="200.0" layoutX="588.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" />
+    <TextField fx:id="HostTextBox" layoutX="432.0" layoutY="111.0" prefHeight="30.0" prefWidth="106.0">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </TextField>
+    <Text layoutX="432.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Host">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <TextField fx:id="OwnerTextBox" layoutX="307.0" layoutY="111.0" prefHeight="30.0" prefWidth="106.0">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </TextField>
+    <Text layoutX="308.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Owner">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <CheckBox fx:id="GardenCheckBox" layoutX="305.0" layoutY="466.0" mnemonicParsing="false" />
+    <CheckBox fx:id="petFriendlyCheckBox" layoutX="305.0" layoutY="525.0" mnemonicParsing="false" />
+</AnchorPane>

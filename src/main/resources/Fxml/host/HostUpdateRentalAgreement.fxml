@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="HostPane" prefHeight="600.0" prefWidth="800.0" styleClass="right_scene" stylesheets="@../../Style/RegisteredUser.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.rmit_hanoi.assignment2.controller.register_user.host.HostUpdateRentAgreement">
+   <VBox prefHeight="600.0" prefWidth="275.0" styleClass="menu_container" stylesheets="@../../Style/RegisteredUser.css">
+      <children>
+         <VBox prefHeight="150.0" prefWidth="275.0" styleClass="logo_container" stylesheets="@../../Style/RegisteredUser.css">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+            <children>
+               <FontAwesomeIconView fill="#d4af37" glyphName="HOME" size="40" text="">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets />
+                  </VBox.margin>
+               </FontAwesomeIconView>
+               <Text fill="#d4af37" strokeType="OUTSIDE" strokeWidth="0.0" text="LUX PMS">
+                  <font>
+                     <Font name="System Bold" size="18.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets />
+                  </VBox.margin>
+               </Text>
+            </children>
+         </VBox>
+         <VBox alignment="CENTER" prefHeight="400.0" prefWidth="275.0" styleClass="menu_container" stylesheets="@../../Style/RegisteredUser.css">
+            <children>
+               <HBox alignment="CENTER" prefHeight="72.0" prefWidth="275.0" styleClass="button_container" stylesheets="@../../Style/RegisteredUser.css">
+                  <VBox.margin>
+                     <Insets bottom="15.0" />
+                  </VBox.margin>
+                  <children>
+                     <FontAwesomeIconView fill="#d4af37" glyphName="DOLLAR" size="30">
+                        <HBox.margin>
+                           <Insets right="8.0" />
+                        </HBox.margin>
+                     </FontAwesomeIconView>
+                     <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToUnpaidPayment" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Browse Unpaid Payment" textAlignment="JUSTIFY">
+                        <font>
+                           <Font name="Arial" size="15.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                     </Button>
+                  </children>
+               </HBox>
+               <HBox alignment="CENTER" prefHeight="78.0" prefWidth="275.0" styleClass="button_container" stylesheets="@../../Style/RegisteredUser.css">
+                  <children>
+                     <FontAwesomeIconView fill="#d4af37" glyphName="EDIT" size="30">
+                        <HBox.margin>
+                           <Insets right="8.0" />
+                        </HBox.margin>
+                     </FontAwesomeIconView>
+                     <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#toManageCommercialProp" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Manage Property" textAlignment="JUSTIFY">
+                        <font>
+                           <Font name="Arial" size="15.0" />
+                        </font>
+                     </Button>
+                  </children>
+                  <VBox.margin>
+                     <Insets bottom="15.0" />
+                  </VBox.margin>
+               </HBox>
+               <HBox alignment="CENTER" prefHeight="83.0" prefWidth="275.0" styleClass="button_container" stylesheets="@../../Style/RegisteredUser.css">
+                  <VBox.margin>
+                     <Insets bottom="15.0" />
+                  </VBox.margin>
+                  <children>
+                     <FontAwesomeIconView fill="#d4af37" glyphName="CLIPBOARD" opacity="0.5" size="30" text="">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets right="8.0" />
+                        </HBox.margin>
+                     </FontAwesomeIconView>
+                     <Button alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" opacity="0.5" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Manage Rent Agreement" textAlignment="JUSTIFY">
+                        <font>
+                           <Font name="Arial" size="15.0" />
+                        </font>
+                     </Button>
+                  </children>
+               </HBox>
+               <HBox alignment="CENTER" prefHeight="71.0" prefWidth="275.0">
+                  <children>
+                     <FontAwesomeIconView fill="#d4af37" glyphName="INFO" size="30" text="" wrappingWidth="17.714285850524902" />
+                     <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#toStatistics" prefWidth="117.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="View Statistics" textAlignment="JUSTIFY">
+                        <font>
+                           <Font name="Arial" size="15.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                     </Button>
+                  </children>
+               </HBox>
+               <HBox alignment="CENTER" prefHeight="82.0" prefWidth="275.0" styleClass="button_container" stylesheets="@../../Style/RegisteredUser.css">
+                  <VBox.margin>
+                     <Insets bottom="15.0" />
+                  </VBox.margin>
+                  <children>
+                     <FontAwesomeIconView fill="#d4af37" glyphName="MALE" size="30">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets right="8.0" />
+                        </HBox.margin>
+                     </FontAwesomeIconView>
+                     <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#toPersonInfo" prefWidth="159.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Personal Information" textAlignment="JUSTIFY">
+                        <font>
+                           <Font name="Arial" size="15.0" />
+                        </font>
+                     </Button>
+                  </children>
+               </HBox>
+               <HBox alignment="CENTER" prefHeight="40.0" prefWidth="275.0" styleClass="button_container" stylesheets="@../../Style/RegisteredUser.css">
+                  <VBox.margin>
+                     <Insets bottom="15.0" />
+                  </VBox.margin>
+                  <children>
+                     <FontAwesomeIconView fill="#d4af37" glyphName="CLOSE" size="30">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets right="8.0" />
+                        </HBox.margin>
+                     </FontAwesomeIconView>
+                     <Button fx:id="logoutButton1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToLoginMenu" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Log Out" textAlignment="JUSTIFY">
+                        <font>
+                           <Font name="Arial" size="15.0" />
+                        </font>
+                     </Button>
+                  </children>
+               </HBox>
+            </children>
+         </VBox>
+      </children>
+   </VBox>
+   <Text fx:id="hostNameText" fill="#d4af37" layoutX="77.0" layoutY="154.423828125" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, Host">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Text>
+   <TableView disable="true" layoutX="473.0" layoutY="212.0" onMouseClicked="#rowClicked" prefHeight="510.0" prefWidth="500.0" visible="false" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <columns>
+         <TableColumn prefWidth="84.0" text="Agreement ID" />
+         <TableColumn prefWidth="123.0" text="Main tenant name" />
+         <TableColumn editable="false" prefWidth="113.0" text="Main tenant phone" />
+         <TableColumn prefWidth="73.0" text="Rent Period" />
+         <TableColumn prefWidth="64.0" text="Rent Price" />
+      </columns>
+   </TableView>
+   <TableView fx:id="rentAgreementTable" layoutX="291.0" layoutY="49.0" onMouseClicked="#rowClicked" prefHeight="440.0" prefWidth="491.0">
+      <columns>
+         <TableColumn fx:id="HMRAgreementIdColumn" prefWidth="36.0" text="ID" />
+         <TableColumn fx:id="HMRAPropertyIdColumn" prefWidth="42.0" text="Property" />
+         <TableColumn fx:id="HMRATenantColumn" prefWidth="41.0" text="Tenant" />
+         <TableColumn fx:id="HMRAOwnerColumn" prefWidth="47.0" text="Owner" />
+         <TableColumn fx:id="HRMAContractDateColumn" prefWidth="92.0" text="Contract Date" />
+         <TableColumn fx:id="HMRARentingFeeColumn" prefWidth="92.0" text="Renting Fee" />
+         <TableColumn fx:id="HMRAPeriodColumn" prefWidth="73.0" text="Period" />
+         <TableColumn fx:id="HMRAStatusColumn" prefWidth="67.0" text="Status" />
+      </columns>
+   </TableView>
+   <Text layoutX="304.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Rental Agreements" wrappingWidth="464.13671875">
+      <font>
+         <Font size="30.0" />
+      </font></Text>
+   <TextField fx:id="HMRAidTextBox" disable="true" layoutX="291.0" layoutY="514.0" prefHeight="25.0" prefWidth="30.0" />
+   <TextField fx:id="HMRtenantIdTextBox" disable="true" layoutX="389.0" layoutY="514.0" prefHeight="25.0" prefWidth="37.0" />
+   <TextField fx:id="HMROwnerIdTextBox" disable="true" layoutX="443.0" layoutY="514.0" prefHeight="25.0" prefWidth="37.0" />
+   <TextField fx:id="HMRrentingFeeTextBox" layoutX="579.0" layoutY="514.0" prefHeight="25.0" prefWidth="77.0" />
+   <Text layoutX="291.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+   <Text layoutX="389.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tenant" />
+   <Text layoutX="444.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Owner" />
+   <Text layoutX="492.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contract Date" />
+   <Text layoutX="579.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Renting Fee" />
+   <Text layoutX="668.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Period" />
+   <Text layoutX="729.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" />
+   <Button layoutX="461.0" layoutY="546.0" mnemonicParsing="false" onAction="#HMRAupdateRA" prefHeight="40.0" prefWidth="159.0" styleClass="menu_button" text="Submit" />
+   <ChoiceBox fx:id="HMRAPeriodChoiceBox" layoutX="668.0" layoutY="514.0" prefHeight="25.0" prefWidth="53.0" />
+   <ChoiceBox fx:id="HMRAStatusChoiceBox" layoutX="729.0" layoutY="514.0" prefHeight="25.0" prefWidth="53.0" />
+   <TextField fx:id="HMRAPropertyIdTextBox" disable="true" layoutX="329.0" layoutY="514.0" prefHeight="25.0" prefWidth="53.0" />
+   <Text layoutX="329.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Property" />
+   <DatePicker fx:id="HMRContractDateTextBox" layoutX="492.0" layoutY="514.0" prefHeight="25.0" prefWidth="74.0" />
+</AnchorPane>

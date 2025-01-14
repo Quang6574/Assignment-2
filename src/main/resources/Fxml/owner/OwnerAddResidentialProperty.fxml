@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="OAPRPane" prefHeight="600.0" prefWidth="800.0" styleClass="right_scene" stylesheets="@../../Style/RegisteredUser.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.rmit_hanoi.assignment2.controller.register_user.owner.OwnerAddResident">
+    <VBox layoutX="24.0" layoutY="37.0" prefHeight="400.0" prefWidth="275.0" styleClass="menu_container" stylesheets="@../../Style/RegisteredUser.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox prefHeight="150.0" prefWidth="275.0" styleClass="logo_container" stylesheets="@../../Style/RegisteredUser.css">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <FontAwesomeIconView fill="#d4af37" glyphName="HOME" size="40" text="">
+                <font>
+                    <Font size="18.0" />
+                </font>
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+            </FontAwesomeIconView>
+            <Text fill="#d4af37" strokeType="OUTSIDE" strokeWidth="0.0" text="LUX PMS">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+            </Text>
+        </VBox>
+        <Text fill="#d4af37" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, Owner">
+            <font>
+                <Font size="18.0" />
+            </font>
+            <VBox.margin>
+                <Insets bottom="30.0" top="10.0" />
+            </VBox.margin>
+        </Text>
+        <VBox prefHeight="400.0" prefWidth="275.0" styleClass="menu_container" stylesheets="@../../Style/RegisteredUser.css">
+            <VBox.margin>
+                <Insets bottom="35.0" />
+            </VBox.margin>
+            <HBox prefHeight="75.0" prefWidth="265.0" styleClass="button_container" stylesheets="@../../Style/RegisteredUser.css">
+                <VBox.margin>
+                    <Insets bottom="15.0" />
+                </VBox.margin>
+                <FontAwesomeIconView fill="#d4af37" glyphName="PLUS" opacity="0.5" size="30">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="8.0" />
+                    </HBox.margin>
+                </FontAwesomeIconView>
+                <Button disable="true" mnemonicParsing="false" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Add Property">
+                    <font>
+                        <Font name="Arial" size="15.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Button>
+            </HBox>
+            <HBox prefHeight="75.0" prefWidth="200.0" styleClass="button_container" stylesheets="@../../Style/RegisteredUser.css">
+                <VBox.margin>
+                    <Insets bottom="15.0" />
+                </VBox.margin>
+                <FontAwesomeIconView fill="#d4af37" glyphName="CLIPBOARD" size="30" text="">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="8.0" />
+                    </HBox.margin>
+                </FontAwesomeIconView>
+                <Button mnemonicParsing="false" onAction="#toOwnerManageCommercial" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Manage Property">
+                    <font>
+                        <Font name="Arial" size="15.0" />
+                    </font>
+                </Button>
+            </HBox>
+            <HBox prefHeight="75.0" prefWidth="275.0" styleClass="button_container" stylesheets="@../../Style/RegisteredUser.css">
+                <VBox.margin>
+                    <Insets bottom="15.0" />
+                </VBox.margin>
+                <FontAwesomeIconView fill="#d4af37" glyphName="MALE" size="30">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="8.0" />
+                    </HBox.margin>
+                </FontAwesomeIconView>
+                <Button mnemonicParsing="false" onAction="#toOwnerPersonInfo" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Personal Information">
+                    <font>
+                        <Font name="Arial" size="15.0" />
+                    </font>
+                </Button>
+            </HBox>
+            <HBox prefHeight="75.0" prefWidth="200.0" styleClass="button_container" stylesheets="@../../Style/RegisteredUser.css">
+                <VBox.margin>
+                    <Insets bottom="15.0" />
+                </VBox.margin>
+                <FontAwesomeIconView fill="#d4af37" glyphName="CLOSE" size="30">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="8.0" />
+                    </HBox.margin>
+                </FontAwesomeIconView>
+                <Button mnemonicParsing="false" onAction="#switchToLoginMenu" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Log Out">
+                    <font>
+                        <Font name="Arial" size="15.0" />
+                    </font>
+                </Button>
+            </HBox>
+        </VBox>
+    </VBox>
+    <Text layoutX="302.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adding a property">
+        <font>
+            <Font size="30.0" />
+        </font>
+    </Text>
+    <Text layoutX="301.0" layoutY="100.107421875" strokeType="OUTSIDE" strokeWidth="0.0" text="Property Address">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <TextField fx:id="OAPRPropertyAddressTextBox" layoutX="301.0" layoutY="104.0" prefHeight="30.0" prefWidth="233.0">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </TextField>
+    <Text layoutX="302.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <Text layoutX="303.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Renting Fee">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <TextField fx:id="OAPRRentingFeeTextBox" layoutX="301.0" layoutY="225.0" prefHeight="30.0" prefWidth="233.0">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </TextField>
+    <Text layoutX="301.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Period">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <Button layoutX="635.0" layoutY="105.0" mnemonicParsing="false" onAction="#OAPRhandleAddImagesAction" prefHeight="28.0" prefWidth="83.0" text="Add Image" />
+    <Button layoutX="604.0" layoutY="518.0" mnemonicParsing="false" onAction="#addResidentProp" prefHeight="56.0" prefWidth="171.0" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Add Property" />
+    <Text layoutX="566.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Property Type:" />
+    <Button disable="true" layoutX="644.0" layoutY="47.0" mnemonicParsing="false" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Resident" />
+    <Button layoutX="713.0" layoutY="47.0" mnemonicParsing="false" onAction="#OMPtoAddCommercial" styleClass="menu_button" stylesheets="@../../Style/RegisteredUser.css" text="Commercial" />
+    <TextField fx:id="OAPRBedroomTextBox" layoutX="301.0" layoutY="342.0" prefHeight="30.0" prefWidth="233.0">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </TextField>
+    <Text layoutX="301.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bedroom">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <Text layoutX="301.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Has Garden">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <Text layoutX="301.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Is Pet Friendly">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <CheckBox fx:id="OAPRGardenCheckBox" layoutX="303.0" layoutY="402.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="17.0" />
+    <CheckBox fx:id="OAPRPetFriendlinessCheckBox" layoutX="303.0" layoutY="463.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="17.0" />
+   <ImageView fx:id="OAPRImageView" fitHeight="150.0" fitWidth="200.0" layoutX="577.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true" />
+   <ChoiceBox fx:id="OAPRStatusChoiceBox" layoutX="302.0" layoutY="165.0" prefHeight="30.0" prefWidth="224.0" />
+   <ChoiceBox fx:id="OAPRPeriodChoiceBox" layoutX="302.0" layoutY="285.0" prefHeight="30.0" prefWidth="224.0" />
+</AnchorPane>
